@@ -499,3 +499,57 @@ document.querySelectorAll('a').forEach(link => {
     });
   }
 });
+
+// ============================================
+// MOBILE HAMBURGER MENU
+// ============================================
+
+function initHamburger() {
+
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+
+  // If any element is missing stop
+  if (!hamburger || !sidebar || !overlay) return;
+
+  // Open sidebar
+  function openSidebar() {
+    sidebar.classList.add('open');
+    hamburger.classList.add('open');
+    overlay.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Close sidebar
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    hamburger.classList.remove('open');
+    overlay.classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+
+  // Toggle on hamburger click
+  hamburger.addEventListener('click', () => {
+    if (sidebar.classList.contains('open')) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  // Close on overlay click
+  overlay.addEventListener('click', closeSidebar);
+
+  // Close on nav link click — important for case study nav
+  document.querySelectorAll('.nav-item, .project-nav-item, .contact-item').forEach(link => {
+    link.addEventListener('click', closeSidebar);
+  });
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSidebar();
+  });
+}
+
+window.addEventListener('load', initHamburger);
