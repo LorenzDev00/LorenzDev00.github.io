@@ -1131,3 +1131,164 @@ body {
   border-color: rgba(64, 130, 109, 0.5);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
+
+/* ============================================
+   MOBILE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Hide hamburger on desktop */
+  .hamburger {
+    display: none;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: fixed;
+    top: var(--space-lg);
+    left: var(--space-lg);
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--color-text-primary);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Hamburger open state — transforms to X */
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Sidebar hidden by default on mobile */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    width: 280px;
+    justify-content: flex-start;
+    padding-top: var(--space-2xl);
+    gap: var(--space-lg);
+  }
+
+  /* Sidebar visible when open */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Overlay behind sidebar */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+
+  .sidebar-overlay.visible {
+    display: block;
+  }
+
+  /* Main content full width — no sidebar offset */
+  .main-content {
+    margin-left: 0;
+    padding: var(--space-2xl) var(--space-md);
+    padding-top: calc(var(--space-2xl) + var(--space-lg));
+  }
+
+  /* Project cards stack vertically */
+  .card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    order: -1;
+    height: 200px;
+  }
+
+  .card-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Hero statement smaller on mobile */
+  .statement {
+    font-size: var(--text-xl);
+  }
+
+  /* Bio heading smaller */
+  .bio-heading {
+    font-size: var(--text-xl);
+  }
+
+  /* Case study title smaller */
+  .case-title {
+    font-size: var(--text-xl);
+  }
+
+  /* Briefing block wraps */
+  .briefing-block {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  /* Background grid stacks */
+  .background-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Image grid stacks */
+  .image-grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  /* Chart height reduced */
+  .chart-container {
+    height: 280px;
+  }
+
+  /* Project sidebar nav on mobile */
+  .project-nav {
+    gap: var(--space-md);
+  }
+
+  .project-nav-item {
+    font-size: var(--text-sm);
+    padding: var(--space-xs) 0;
+  }
+
+}
+
+/* Hide hamburger on desktop — important */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none !important;
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+}
