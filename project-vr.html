@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape the Unknown — Lorenzo Bignami</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@400;600;700&family=Space+Mono&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar sidebar-project">
+
+    <div class="project-nav-title">
+      <span class="project-nav-label">ESCAPE THE UNKNOWN</span>
+    </div>
+
+    <nav class="project-nav">
+      <a href="#context" class="project-nav-item active">CONTEXT</a>
+      <a href="#environment" class="project-nav-item">THE ENVIRONMENT</a>
+      <a href="#guidance" class="project-nav-item">GUIDANCE SYSTEM</a>
+      <a href="#layout" class="project-nav-item">LAYOUT</a>
+      <a href="#testing" class="project-nav-item">TESTING</a>
+      <a href="#learnings" class="project-nav-item">LEARNINGS</a>
+    </nav>
+
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-item active">WORKS</a>
+      <a href="about.html" class="nav-item">ABOUT</a>
+    </nav>
+
+    <div class="sidebar-contact">
+      <a href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/lorenzo-bignami/dc9fa0aa-f25f-40bd-8bfd-ccf30e819f8e?view=html"
+        class="contact-item">CV</a>
+      <a href="mailto:lorenzo.bignami@gmail.com" class="contact-item">EMAIL</a>
+      <a href="https://linkedin.com/in/lorenzobignami" class="contact-item">LINKEDIN</a>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HERO -->
+    <section class="case-hero">
+      <h1 class="case-title">Escape the Unknown</h1>
+    </section>
+
+    <!-- BRIEFING BLOCK -->
+    <div class="briefing-block">
+      <div class="briefing-item">
+        <span class="briefing-label">ROLE</span>
+        <span class="briefing-value">VR Developer</span>
+      </div>
+      <div class="briefing-item">
+        <span class="briefing-label">DURATION</span>
+        <span class="briefing-value">3 months</span>
+      </div>
+      <div class="briefing-item">
+        <span class="briefing-label">YEAR</span>
+        <span class="briefing-value">2024</span>
+      </div>
+      <div class="briefing-item">
+        <span class="briefing-label">TOOLS</span>
+        <span class="briefing-value">Unity<br>ChatGPT</span>
+      </div>
+      <div class="briefing-item">
+        <span class="briefing-label">TYPE</span>
+        <span class="briefing-value">University Project</span>
+      </div>
+    </div>
+
+    <div class="tldr-block">
+      <span class="tldr-label">TL;DR</span>
+      <p>A VR escape experience built in Unity for a university course exam. I designed a failing
+        spaceship interior with diegetic guidance, colour-coded navigation and an atmospheric soundscape.</p>
+      <p>Learned from professor feedback that immersion breaks when any single layer is missing.</p>
+    </div>
+
+    <!-- CONTEXT -->
+    <section class="case-section" id="context">
+      <h2 class="case-section-heading">CONTEXT</h2>
+      <p>This was the exam project for a VR Design course during my master's degree. The theme was easy: it wasen't
+        required to built a complex VR; placeholder shapes were fine.<br>
+        But I didn't join the course to just serve a characterless VR.
+      <p>I wanted to integrate atmosphere, soundscape and environmental storytelling ... and I did.</p>
+      <p>It was also my first serious encounter with Unity; it was the occascion to learn a Game Engine and understand
+        how events like gravity, collisions and triggers, work in a digital reality.
+      <p>Programming was the foundation but I also had to understand a VR can be immersive from a user prospective.</p>
+
+      <p>The project had real constraints:</p>
+      <ul class="case-list-marked">
+        <li>Solo development across 3 months</li>
+        <li>No VR headset available: all testing done in desktop mode</li>
+        <li>Two scenes required, completable in 5 to 10 minutes to avoid cybersickness</li>
+        <li>Free assets only</li>
+        <li>Instructions had to exist within the VR itself</li>
+        <li>Final evaluation by three professors using an actual headset</li>
+      </ul>
+    </section>
+
+    <!-- THE ENVIRONMENT -->
+    <section class="case-section" id="environment">
+      <h2 class="case-section-heading">THE ENVIRONMENT</h2>
+      <p>A spaceship was the only choice for a science fiction fan. The concept drew inspiration from Dead Space and
+        Alien Isolation: not for horror, but for the atmospheric logic of a confined, degraded space that feels like
+        it's running out of time.</p>
+      <p>The ship is damaged and empty. The damage creates urgency and the environment signals danger without needing a
+        countdown timer. The emptiness was partly a practical decision at my stage of learning, but it also served the
+        atmosphere: isolation amplifies tension far more effectively than enemies would have.</p>
+      <p>Rooms were designed to be spatially legible. Every path communicated its status through environmental cues:</p>
+
+      <ul class="case-list">
+        <li><span class="list-label">OPEN PATHS</span>clear floor space, functioning lights, green hologram markers</li>
+        <li><span class="list-label">BLOCKED PATHS</span>Blocked paths crates and debris physically obstructing doorways
+        </li>
+        <li><span class="list-label">DANGEROUS AREAS</span>fire, flickering lights, circuit flares signalling structural
+          failure</li>
+        <li><span class="list-label">LOCKED DOORS</span>red warning signs and alarm lighting indicating no entry</li>
+      </ul>
+
+      <p>The colour logic emerged naturally. Green meant safe, functioning, go. Red meant danger, broken, find another
+        route. Players could read the environment without reading text.</p>
+      <!-- HERO IMAGE -->
+      <figure class="case-image full-width">
+        <img src="assets/images/project-vr/bridge.png" alt="Ship bridge overview">
+        <figcaption>The ship bridge — command centre showing the hologram message system, space debris through the
+          windows, and fire in the background</figcaption>
+      </figure>
+
+      <!-- ENVIRONMENT IMAGES -->
+      <figure class="case-image full-width">
+        <img src="assets/images/project-vr/fire-room.png" alt="Engine room with fire breach">
+        <figcaption>Engine room — fire breach creating environmental hazard and blocking certain paths</figcaption>
+      </figure>
+
+      <figure class="case-image full-width">
+        <img src="assets/images/project-vr/door-system.png" alt="Colour coded door system">
+        <figcaption>Colour coded navigation — green signals safe passage toward evacuation, red signals blocked or out
+          of service doors</figcaption>
+      </figure>
+
+    </section>
+
+    <!-- GUIDANCE SYSTEM -->
+    <section class="case-section" id="guidance">
+      <h2 class="case-section-heading">GUIDANCE SYSTEM</h2>
+      <p>The brief required instructions to exist within the VR. Most projects solved this with a flat instruction panel
+        at the start. I used it as a storytelling opportunity instead.</p>
+      <p>The captain left hologram messages scattered across the ship; breadcrumbs guiding the crew toward the escape
+        pods. Each message appeared at a decision point, telling the player exactly what to do next in that specific
+        location. It solved the orientation problem without breaking immersion: the guidance was diegetic, embedded in
+        the world, consistent with the fiction.</p>
+      <p>The professors flagged that holograms alone weren't sufficient: directional signage throughout the corridors
+        would have reinforced the guidance system. They were right. In most sci-fi environments, lighting and signage
+        work together to direct movement. The holograms were the right idea, but needed environmental support to
+        complete the system.</p>
+
+      <figure class="case-image full-width">
+        <img src="assets/images/project-vr//hologram-message.png" alt="Captain hologram message">
+        <figcaption>Captain's hologram message: diegetic guidance embedded in the environment at each decision point
+        </figcaption>
+      </figure>
+
+      <figure class="case-image full-width">
+        <img src="assets/images/project-vr/evacuation-hologram.png" alt="Evacuation area hologram">
+        <figcaption>Evacuation area marker: green hologram directing players toward the escape pods</figcaption>
+      </figure>
+
+    </section>
+
+    <!-- LAYOUT -->
+    <section class="case-section" id="layout">
+      <h2 class="case-section-heading">LAYOUT</h2>
+      <p>The ship used Y-junction corridors rather than a single straight path. This created genuine navigation choices:
+        players had to read the environment to decide which direction to take. Combined with the colour-coded door
+        system and hologram messages, the spatial layout became part of the puzzle rather than just a container for it.
+      </p>
+      <p>The top-down view of the ship shows the branching structure clearly: multiple routes, dead ends, and the
+        escape pods positioned at the periphery of the layout.</p>
+
+      <figure class="case-image full-width">
+        <img src="assets/images/project-vr/layout-topdown.png" alt="Ship layout top-down view">
+        <figcaption>Ship layout: Y-junction corridor structure creating navigation choices, with escape pods at the
+          periphery</figcaption>
+      </figure>
+
+    </section>
+
+    <!-- TESTING -->
+    <section class="case-section" id="testing">
+      <h2 class="case-section-heading">TESTING & FEEDBACK</h2>
+      <p>The final evaluation involved three professors experiencing the VR with an actual headset: the first time any
+        headset was used, since none were available during development. This created unavoidable issues.</p>
+
+      <ul class="case-list-marked">
+        <li>Some walls could be passed through: collision detection gaps not visible in desktop testing</li>
+        <li>Desktop-to-headset input mapping created control inconsistencies nobody could have anticipated without
+          hardware access</li>
+        <li>The teleportation system worked but felt wrong: instant point-to-point movement broke presence. A fluid
+          transition would have been significantly better</li>
+        <li>Professors noticed the absence of footsteps and blaster sounds, but appreciated the existing soundscape:
+          alarms, explosions, emergency alerts</li>
+        <li>Hologram guidance was praised but flagged as incomplete without directional environmental cues throughout
+          the corridors</li>
+      </ul>
+
+      <p>The hardware constraint was the most honest lesson: you cannot validate a VR experience without testing in the
+        target medium. Designing blind introduced problems that no amount of desktop testing could have revealed.</p>
+      <figure class="video-wrapper">
+        <div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1182603434?badge=0&autopause=0&player_id=0&app_id=58479"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            title="Escape the Unknown — VR Interior">
+          </iframe>
+        </div>
+        <figcaption class="video-caption">Ship interior walkthrough — atmosphere, lighting and environmental
+          storytelling</figcaption>
+      </figure>
+    </section>
+
+    <!-- LEARNINGS -->
+    <section class="case-section" id="learnings">
+      <h2 class="case-section-heading">LEARNINGS</h2>
+      <p>Building this experience taught me that immersion is fragile. In VR especially, every missing element like a
+        sound, a transition, a navigation cue can break the illusion faster than any visual flaw could. Good assets, a
+        considered soundscape, spatial logic and coherent storytelling aren't optional layers. They're the structure the
+        experience depends on.</p>
+      <p>It also introduced me to Unity, which made the development stage of my thesis game significantly
+        faster.<br>More
+        importantly, it gave me a felt understanding of what players need to feel present in a virtual environment,
+        which became the research question <a class="link" href="project-sound.html">research question</a> I spent six
+        months investigating.</p>
+
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
