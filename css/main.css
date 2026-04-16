@@ -1292,3 +1292,117 @@ body {
     display: none !important;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* ── HAMBURGER CONTRAST LAYER ── */
+  .hamburger {
+    background-color: rgba(13, 13, 13, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 10px;
+    border-radius: 6px;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  /* ── SIDEBAR MOBILE SPACING ── */
+  .sidebar {
+    overflow-y: auto;
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    gap: var(--space-md);
+    justify-content: flex-start;
+  }
+
+  /* Project nav tighter spacing */
+  .project-nav {
+    gap: var(--space-sm);
+  }
+
+  .project-nav-item {
+    padding: 6px 0;
+    padding-left: var(--space-sm);
+  }
+
+  /* Active state border fix — prevent it sticking to text */
+  .project-nav-item.active {
+    border-left: 2px solid var(--color-accent);
+    padding-left: calc(var(--space-sm) - 2px);
+  }
+
+  /* Project title closer to nav */
+  .project-nav-title {
+    margin-bottom: var(--space-xs);
+    padding-bottom: var(--space-xs);
+  }
+
+  /* Sidebar contact always visible */
+  .sidebar-contact {
+    margin-top: auto;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+    flex-shrink: 0;
+  }
+
+  /* ── ABOUT PAGE ── */
+
+  /* Bio header stacks vertically */
+  .bio-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  /* Bio heading size reduced */
+  .bio-heading {
+    font-size: 28px;
+    word-break: break-word;
+  }
+
+  /* ── WORKS PAGE ── */
+
+  /* Name smaller than statement */
+  .name {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+  }
+
+  /* Statement more prominent */
+  .statement {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+
+  /* Reduce gap between hero and works */
+  .hero {
+    min-height: auto;
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-lg);
+    gap: var(--space-lg);
+  }
+
+  .works {
+    padding-top: var(--space-md);
+  }
+
+  /* ── PROJECT PAGE BRIEFING BLOCK ── */
+
+  /* Two column grid instead of single pile */
+  .briefing-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  /* Last item full width if odd number */
+  .briefing-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+}
