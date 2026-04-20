@@ -1061,6 +1061,7 @@ body {
 
   /* Hamburger */
   .hamburger {
+    font-family: system-ui, -apple-system, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1106,6 +1107,7 @@ body {
   }
 
   .sidebar-close {
+    font-family: system-ui, -apple-system, sans-serif;
     display: flex;
     align-self: flex-end;
     background: none;
