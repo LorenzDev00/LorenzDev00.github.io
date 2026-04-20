@@ -482,7 +482,7 @@ document.querySelectorAll('a').forEach(link => {
     !link.getAttribute('href').startsWith('#') &&
     !link.getAttribute('href').startsWith('mailto')
   ) {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
       const destination = this.href;
 
@@ -510,43 +510,37 @@ function initHamburger() {
   const sidebar = document.querySelector('.sidebar');
   const overlay = document.getElementById('sidebarOverlay');
 
-  // If any element is missing stop
   if (!hamburger || !sidebar || !overlay) return;
 
-  // Open sidebar
   function openSidebar() {
     sidebar.classList.add('open');
-    hamburger.classList.add('open');
     overlay.classList.add('visible');
     document.body.style.overflow = 'hidden';
+    hamburger.classList.add('hidden');
   }
 
-  // Close sidebar
   function closeSidebar() {
     sidebar.classList.remove('open');
-    hamburger.classList.remove('open');
     overlay.classList.remove('visible');
     document.body.style.overflow = '';
+    hamburger.classList.remove('hidden');
   }
 
-  // Toggle on hamburger click
-  hamburger.addEventListener('click', () => {
-    if (sidebar.classList.contains('open')) {
-      closeSidebar();
-    } else {
-      openSidebar();
-    }
-  });
+  hamburger.addEventListener('click', openSidebar);
 
-  // Close on overlay click
+  // Find close button after DOM is ready
+  // Use querySelector on the sidebar itself to be precise
+  const sidebarClose = sidebar.querySelector('.sidebar-close');
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', closeSidebar);
+  }
+
   overlay.addEventListener('click', closeSidebar);
 
-  // Close on nav link click — important for case study nav
   document.querySelectorAll('.nav-item, .project-nav-item, .contact-item').forEach(link => {
     link.addEventListener('click', closeSidebar);
   });
 
-  // Close on escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeSidebar();
   });
