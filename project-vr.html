@@ -21,10 +21,10 @@
   <div id="ascii-container-pr"></div>
 
   <!-- MOBILE HAMBURGER BUTTON -->
-<button class="hamburger" id="hamburger" aria-label="Open navigation">&#9776;</button>
+  <button class="hamburger" id="hamburger" aria-label="Open navigation">&#9776;</button>
 
-<!-- MOBILE OVERLAY -->
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <!-- MOBILE OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
   <!-- SIDEBAR -->
   <aside class="sidebar sidebar-project">
@@ -91,21 +91,29 @@
 
     <div class="tldr-block">
       <span class="tldr-label">TL;DR</span>
-      <p>A VR escape experience built in Unity for a university course exam. I designed a failing
-        spaceship interior with diegetic guidance, colour-coded navigation and an atmospheric soundscape.</p>
-      <p>Learned from professor feedback that immersion breaks when any single layer is missing.</p>
+      <p>I designed and built a VR escape experience set inside a failing spaceship, using environment, colour, and
+        sound to guide players without breaking immersion.</p>
+
+      <p>The project revealed a key insight: in VR, immersion is fragile: remove even a single layer, and the
+        experience starts to fall apart.</p>
     </div>
 
     <!-- CONTEXT -->
     <section class="case-section" id="context">
       <h2 class="case-section-heading">CONTEXT</h2>
-      <p>This was the exam project for a VR Design course during my master's degree. The theme was easy: it wasen't
-        required to built a complex VR; placeholder shapes were fine.<br>
-        But I didn't join the course to just serve a characterless VR.
-      <p>I wanted to integrate atmosphere, soundscape and environmental storytelling ... and I did.</p>
-      <p>It was also my first serious encounter with Unity; it was the occascion to learn a Game Engine and understand
-        how events like gravity, collisions and triggers, work in a digital reality.
-      <p>Programming was the foundation but I also had to understand a VR can be immersive from a user prospective.</p>
+      <p>This project started as an exam for a VR Design course during my master’s degree. The brief was intentionally
+        simple: a functional VR experience was enough, even with placeholder assets.</p>
+
+      <p>I chose to push beyond that. Instead of building something minimal, I focused on creating a coherent experience
+        through atmosphere, sound, and environmental storytelling.</p>
+
+      <p>It was also my first serious encounter with Unity. Beyond learning the technical foundations like physics,
+        collisions and triggers, I started understanding how these systems shape what a user perceives and feels inside
+        a
+        virtual environment.</p>
+
+      <p>The challenge wasn’t just to make something that worked, but to make something that felt believable from a
+        user’s perspective.</p>
 
       <p>The project had real constraints:</p>
       <ul class="case-list-marked">
@@ -121,13 +129,18 @@
     <!-- THE ENVIRONMENT -->
     <section class="case-section" id="environment">
       <h2 class="case-section-heading">THE ENVIRONMENT</h2>
-      <p>A spaceship was the only choice for a science fiction fan. The concept drew inspiration from Dead Space and
-        Alien Isolation: not for horror, but for the atmospheric logic of a confined, degraded space that feels like
-        it's running out of time.</p>
-      <p>The ship is damaged and empty. The damage creates urgency and the environment signals danger without needing a
-        countdown timer. The emptiness was partly a practical decision at my stage of learning, but it also served the
-        atmosphere: isolation amplifies tension far more effectively than enemies would have.</p>
-      <p>Rooms were designed to be spatially legible. Every path communicated its status through environmental cues:</p>
+      <p>I chose a spaceship setting to create a controlled, enclosed environment where space, navigation, and
+        atmosphere could be tightly designed.</p>
+
+      <p>The concept drew inspiration from Dead Space and Alien Isolation: not for horror, but for their ability to
+        create tension through environment rather than explicit threats.</p>
+
+      <p>The ship is damaged and empty. Damage creates urgency, while emptiness amplifies isolation. This was partly a
+        technical constraint, but also a deliberate design choice: without enemies, the environment itself had to carry
+        the experience.</p>
+
+      <p>Every space was designed to be immediately legible. Instead of relying on instructions, the environment
+        communicated what was safe, blocked, or dangerous through visual cues:</p>
 
       <ul class="case-list">
         <li><span class="list-label">OPEN PATHS</span>clear floor space, functioning lights, green hologram markers</li>
@@ -138,8 +151,8 @@
         <li><span class="list-label">LOCKED DOORS</span>red warning signs and alarm lighting indicating no entry</li>
       </ul>
 
-      <p>The colour logic emerged naturally. Green meant safe, functioning, go. Red meant danger, broken, find another
-        route. Players could read the environment without reading text.</p>
+      <p>The colour logic became the backbone of navigation: green signalled safety and progression, while red indicated
+        danger or blocked paths. Players could understand where to go without relying on text.</p>
       <!-- HERO IMAGE -->
       <figure class="case-image full-width">
         <img src="assets/images/project-vr/bridge.png" alt="Ship bridge overview">
@@ -164,16 +177,22 @@
     <!-- GUIDANCE SYSTEM -->
     <section class="case-section" id="guidance">
       <h2 class="case-section-heading">GUIDANCE SYSTEM</h2>
-      <p>The brief required instructions to exist within the VR. Most projects solved this with a flat instruction panel
-        at the start. I used it as a storytelling opportunity instead.</p>
-      <p>The captain left hologram messages scattered across the ship; breadcrumbs guiding the crew toward the escape
-        pods. Each message appeared at a decision point, telling the player exactly what to do next in that specific
-        location. It solved the orientation problem without breaking immersion: the guidance was diegetic, embedded in
-        the world, consistent with the fiction.</p>
-      <p>The professors flagged that holograms alone weren't sufficient: directional signage throughout the corridors
-        would have reinforced the guidance system. They were right. In most sci-fi environments, lighting and signage
-        work together to direct movement. The holograms were the right idea, but needed environmental support to
-        complete the system.</p>
+      <p>The brief required instructions to exist within the VR. Most projects solved this with static instruction
+        panels at the start.</p>
+
+      <p>I treated guidance as part of the experience instead.</p>
+
+      <p>The captain’s hologram messages were placed at key decision points, acting as contextual instructions embedded
+        in the world. Each message guided the player only when needed, maintaining flow without breaking immersion.</p>
+
+      <p>This created a diegetic guidance system: information existed inside the environment, consistent with the
+        narrative and the player’s role.</p>
+
+      <p>During evaluation, professors highlighted a limitation: holograms alone were not sufficient. Directional
+        signage throughout the environment would have reinforced navigation.</p>
+
+      <p>This revealed an important insight: guidance in immersive environments works best as a system, where multiple
+        cues like lighting, signage, and narrative elements support each other.</p>
 
       <figure class="case-image full-width">
         <img src="assets/images/project-vr//hologram-message.png" alt="Captain hologram message">
@@ -191,12 +210,15 @@
     <!-- LAYOUT -->
     <section class="case-section" id="layout">
       <h2 class="case-section-heading">LAYOUT</h2>
-      <p>The ship used Y-junction corridors rather than a single straight path. This created genuine navigation choices:
-        players had to read the environment to decide which direction to take. Combined with the colour-coded door
-        system and hologram messages, the spatial layout became part of the puzzle rather than just a container for it.
-      </p>
-      <p>The top-down view of the ship shows the branching structure clearly: multiple routes, dead ends, and the
-        escape pods positioned at the periphery of the layout.</p>
+      <p>The spatial layout was designed to make navigation an active part of the experience.</p>
+
+      <p>Instead of a linear path, the ship used Y-junction corridors that forced players to interpret environmental
+        cues and make decisions. Navigation became a problem to solve, not just a path to follow.</p>
+
+      <p>Combined with colour coding and hologram guidance, the layout itself became part of the interaction design.</p>
+
+      <p>The top-down view highlights this structure: branching paths, dead ends, and escape points placed at the edges
+        of the environment.</p>
 
       <figure class="case-image full-width">
         <img src="assets/images/project-vr/layout-topdown.png" alt="Ship layout top-down view">
@@ -209,8 +231,10 @@
     <!-- TESTING -->
     <section class="case-section" id="testing">
       <h2 class="case-section-heading">TESTING & FEEDBACK</h2>
-      <p>The final evaluation involved three professors experiencing the VR with an actual headset: the first time any
-        headset was used, since none were available during development. This created unavoidable issues.</p>
+      <p>The final evaluation was the first time the experience was tested using an actual VR headset. During
+        development, no hardware was available, and all testing was done in desktop mode.</p>
+
+      <p>This gap between design and real usage quickly became visible:</p>
 
       <ul class="case-list-marked">
         <li>Some walls could be passed through: collision detection gaps not visible in desktop testing</li>
@@ -241,15 +265,18 @@
     <!-- LEARNINGS -->
     <section class="case-section" id="learnings">
       <h2 class="case-section-heading">LEARNINGS</h2>
-      <p>Building this experience taught me that immersion is fragile. In VR especially, every missing element like a
-        sound, a transition, a navigation cue can break the illusion faster than any visual flaw could. Good assets, a
-        considered soundscape, spatial logic and coherent storytelling aren't optional layers. They're the structure the
-        experience depends on.</p>
-      <p>It also introduced me to Unity, which made the development stage of my thesis game significantly
-        faster.<br>More
-        importantly, it gave me a felt understanding of what players need to feel present in a virtual environment,
-        which became the research question <a class="link" href="project-sound.html">research question</a> I spent six
-        months investigating.</p>
+      <p>This project showed me how fragile immersion is, especially in VR. Missing elements (sound, movement
+        transitions, navigation cues) break the experience far more quickly than visual imperfections.</p>
+
+      <p>Immersion is not built from individual features, but from how multiple systems work together to create a
+        coherent experience.</p>
+
+      <p>It also introduced me to Unity, which later allowed me to move faster and with more control during my thesis
+        project.</p>
+
+      <p>More importantly, it shaped how I think about user experience in virtual environments; a line of thinking that
+        directly led to the research question I explored in my <a class="link" href="project-sound.html">thesis
+          project</a>.</p>
 
     </section>
 
