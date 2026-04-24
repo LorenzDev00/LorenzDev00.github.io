@@ -109,7 +109,7 @@ body {
 
 .sidebar-project {
   justify-content: flex-end;
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-2md) var(--space-md);
 }
 
 .project-nav-title {
